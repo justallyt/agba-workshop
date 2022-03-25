@@ -38,21 +38,22 @@ img{
     object-fit: cover;
 }
 #preloader{
-    position:absolute;
-    display:none;
+    position:fixed;
+    display:flex;
     justify-content: center;
     align-items: center;
     width:100%;
     height:100%;
     top:0;
     bottom:0;
+    z-index:999;
     background:#ebf0f7;
 }
 #preloader h1{
     font-family: 'Righteous', cursive;
     font-size:45px;
-    animation:textAnimation 3s ease infinite;
-    -webkit-animation:textAnimation 3s ease infinite;
+    animation:textAnimation 2s ease infinite;
+    -webkit-animation:textAnimation 2s ease infinite;
     color:rgb(0, 0, 185);
 }
 
@@ -814,7 +815,14 @@ footer{
     }
 }
 
-
+@keyframes textAnimation{
+    0%{
+        letter-spacing: 18px;  
+    }
+    100%{
+        letter-spacing: 1px;
+    }
+}
 @media(max-width:1200px){
     .inner-row{
         width:95%;

@@ -1,5 +1,7 @@
 const preloader = document.getElementById("preloader")
 
 window.addEventListener("load", ()=>{
-    preloader.classList.add("rollOut")
+    setTimeout(()=>{
+        preloader.classList.add("rollOut")
+    }, 3000)
 })
